@@ -14,7 +14,7 @@
  */
 window.APP_CONFIG = {
   // Contoh: "https://script.google.com/macros/s/AKfycbx....../exec"
-  API_URL: "https://script.google.com/macros/s/AKfycbx2YDrU2dTKkGSfsZf4CEg3A6i3iDvXf3ojJ7gmdsIMBpDqIA3TTyQ6DuBV_Uni1wTq/exec",
+  API_URL: "https://script.google.com/macros/s/AKfycbzBcbdXy5GGPfQtOukaaNoCGewA4PueMcEJADDH6L0H3My98AG3Pa54eLjfIwesZdi9/exec",
 
   // Harus cocok dengan Script Property "WRITE_TOKEN" di Apps Script.
   WRITE_TOKEN: "ms_9f3K2x8pQ7zL",
