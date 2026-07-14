@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <title>Admin - Donasi Media muslimsolo.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div class="container">
+      <!-- LOGIN -->
+      <section id="login-view">
+        <div class="login-wrap">
+          <div class="login-card">
+            <div class="login-head">
+              <div class="login-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h1>Login Admin</h1>
+              <p>Masuk untuk mengelola donasi dan program.</p>
+            </div>
+            <div class="notice err hidden" id="login-err"></div>
+            <div class="field">
+              <label for="username">Username</label>
+              <input id="username" class="input" type="text" autocomplete="username" placeholder="Masukkan username" />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input id="password" class="input" type="password" autocomplete="current-password" placeholder="Masukkan password" />
+            </div>
+            <button class="btn btn-primary btn-lg" id="login-btn">Masuk</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- APP (setelah login) -->
+      <div id="app-view" class="hidden app-with-nav">
+        <!-- TAB: Verifikasi -->
+        <section class="tab" id="tab-verify">
+          <div class="tab-head">
+            <h1 class="page-title">Dashboard</h1>
+            <p class="page-subtitle">Ringkasan donasi dan program yang sedang berjalan.</p>
+          </div>
+          <div class="stats" id="stats"></div>
+          <div class="section-head">
+            <div class="section-label" style="margin:0">Donasi Menunggu Verifikasi</div>
+            <button class="btn btn-ghost auto" id="refresh-btn">Muat Ulang</button>
+          </div>
+          <div id="pending-list"></div>
+        </section>
+
+        <!-- TAB: Program Donasi (CRUD) -->
+        <section class="tab hidden" id="tab-program">
+          <div class="section-head">
+            <div>
+              <h1 class="page-title">Program Donasi</h1>
+              <p class="page-subtitle">Kelola program donasi yang ditampilkan ke publik.</p>
+            </div>
+            <button class="btn btn-primary auto" id="add-campaign">+ Tambah</button>
+          </div>
+          <div id="campaign-list"></div>
+        </section>
+
+        <!-- TAB: LPJ Pengadaan -->
+        <section class="tab hidden" id="tab-lpj">
+          <div class="section-head">
+            <div>
+              <h1 class="page-title">LPJ Pengadaan</h1>
+              <p class="page-subtitle">Kelola laporan pertanggungjawaban penggunaan dana.</p>
+            </div>
+            <button class="btn btn-primary auto" id="add-lpj">+ Tambah</button>
+          </div>
+          <div id="lpj-list"></div>
+        </section>
+
+        <!-- TAB: Akun Admin -->
+        <section class="tab hidden" id="tab-account">
+          <div class="section-head">
+            <div>
+              <h1 class="page-title">Akun Admin</h1>
+              <p class="page-subtitle">Atur akun yang dapat mengakses console admin.</p>
+            </div>
+            <button class="btn btn-primary auto" id="add-admin">+ Tambah</button>
+          </div>
+          <div id="admin-list"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav hidden" id="bottom-nav">
+    <button class="nav-item active" data-tab="verify">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Verifikasi
+    </button>
+    <button class="nav-item" data-tab="program">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg>
+      Program
+    </button>
+    <button class="nav-item" data-tab="lpj">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+      LPJ
+    </button>
+    <button class="nav-item" data-tab="account">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+      Akun
+    </button>
+    <button class="nav-item danger" id="nav-logout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+      Keluar
+    </button>
+  </nav>
+
+  <!-- MODAL -->
+  <div class="modal-overlay hidden" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modal-title">Judul</h2>
+        <button class="modal-x" id="modal-close" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/sample-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

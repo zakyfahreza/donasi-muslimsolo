@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720" role="img" aria-label="Bukti pembayaran QRIS dummy">
+  <defs>
+    <linearGradient id="hd2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1c64f2"/>
+      <stop offset="1" stop-color="#0e9f6e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="540" height="720" fill="#eef1f5"/>
+
+  <!-- status bar -->
+  <rect width="540" height="44" fill="url(#hd2)"/>
+  <text x="24" y="29" font-size="16" font-weight="700" fill="#ffffff" font-family="'Segoe UI',sans-serif">09:43</text>
+  <text x="516" y="29" font-size="14" text-anchor="end" fill="#ffffff" font-family="'Segoe UI',sans-serif">95% &#9745;</text>
+
+  <!-- header -->
+  <rect y="44" width="540" height="64" fill="url(#hd2)"/>
+  <text x="270" y="84" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff" font-family="'Segoe UI',sans-serif">Pembayaran QRIS</text>
+
+  <!-- success -->
+  <circle cx="270" cy="190" r="48" fill="#0e9f6e"/>
+  <path d="M248 190 l16 16 l30 -34" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="270" text-anchor="middle" font-size="24" font-weight="800" fill="#0f1b2d" font-family="'Segoe UI',sans-serif">Pembayaran Berhasil</text>
+  <text x="270" y="300" text-anchor="middle" font-size="14" fill="#64748b" font-family="'Segoe UI',sans-serif">25 Jun 2026, 09:43 WIB</text>
+
+  <!-- amount -->
+  <text x="270" y="360" text-anchor="middle" font-size="34" font-weight="800" fill="#0f1b2d" font-family="'Segoe UI',sans-serif">Rp50.000</text>
+
+  <!-- mini qr -->
+  <g transform="translate(220,392)">
+    <rect width="100" height="100" rx="8" fill="#ffffff" stroke="#e8ecf1"/>
+    <g fill="#0f1b2d">
+      <rect x="12" y="12" width="26" height="26"/><rect x="18" y="18" width="14" height="14" fill="#ffffff"/>
+      <rect x="62" y="12" width="26" height="26"/><rect x="68" y="18" width="14" height="14" fill="#ffffff"/>
+      <rect x="12" y="62" width="26" height="26"/><rect x="18" y="68" width="14" height="14" fill="#ffffff"/>
+      <rect x="46" y="14" width="8" height="8"/><rect x="46" y="30" width="8" height="8"/>
+      <rect x="46" y="46" width="8" height="8"/><rect x="62" y="50" width="8" height="8"/>
+      <rect x="78" y="62" width="8" height="8"/><rect x="62" y="78" width="8" height="8"/>
+      <rect x="78" y="78" width="8" height="8"/><rect x="30" y="50" width="8" height="8"/>
+    </g>
+  </g>
+
+  <!-- receipt -->
+  <rect x="30" y="520" width="480" height="150" rx="18" fill="#ffffff"/>
+  <g font-family="'Segoe UI',sans-serif">
+    <text x="54" y="556" font-size="13" fill="#64748b">Merchant</text>
+    <text x="486" y="556" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">Kemuslimahan Masjid Al-Ikhlas</text>
+    <line x1="54" y1="576" x2="486" y2="576" stroke="#e8ecf1" stroke-width="1" stroke-dasharray="3 5"/>
+    <text x="54" y="610" font-size="13" fill="#64748b">No. Referensi</text>
+    <text x="486" y="610" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">QR2406250943ABC</text>
+    <text x="270" y="650" text-anchor="middle" font-size="11" fill="#94a3b8">Bukti ini hanya contoh / dummy untuk demo</text>
+  </g>
+</svg>

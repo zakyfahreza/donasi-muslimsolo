@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <title>Donasi Media muslimsolo.id</title>
+  <meta name="description" content="Open donasi untuk program-program MuslimSolo.id. Pilih campaign, donasi, dan bantu wujudkan kebaikan." />
+  <!-- Pra-koneksi ke server Apps Script & Google Drive agar loading data/gambar lebih cepat. -->
+  <link rel="preconnect" href="https://script.google.com" crossorigin />
+  <link rel="preconnect" href="https://script.googleusercontent.com" crossorigin />
+  <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
+  <link rel="dns-prefetch" href="https://script.google.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+          <span class="blob blob-2"></span>
+          <span class="blob blob-3"></span>
+        </div>
+        <div class="hero-inner">
+          <div class="hero-text">
+            <span class="hero-eyebrow">✦ Ambil Peran Dakwah Sunnah Kota Solo</span>
+            <h1>Bersama Menguatkan<br />Jalan Dakwah</h1>
+            <p>Setiap donasi Anda menjadi bagian dari perjuangan dakwah melalui pengembangan media, penyebaran ilmu, dan kegiatan kebaikan di tengah masyarakat.</p>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/img/hero.png" alt="Kegiatan dakwah MuslimSolo.id" loading="eager" />
+          </div>
+        </div>
+      </section>
+
+      <h2 class="page-title">Program Donasi</h2>
+      <p class="page-subtitle">Setiap rupiah yang terkumpul insyaAllah menjadi amal jariyah.</p>
+
+      <div id="content">
+        <div class="state"><div class="spinner"></div>Memuat program donasi...</div>
+      </div>
+
+      <section class="lpj-section">
+        <h2 class="page-title">Laporan Pertanggungjawaban</h2>
+        <p class="page-subtitle">Transparansi penggunaan dana dari setiap pengadaan.</p>
+        <div id="lpj-content">
+          <div class="state"><div class="spinner"></div>Memuat laporan...</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="footer">&copy; <span id="year"></span> MuslimSolo.id &middot; Open Donasi</div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/sample-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <title>Donasi Sekarang - Donasi Media muslimsolo.id</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div class="container">
+      <a class="back-link" href="#" id="back">&larr; Kembali</a>
+
+      <div class="steps" id="steps">
+        <div class="stp active" data-step="1"><span class="dot">1</span><span>Nominal</span></div>
+        <div class="bar"></div>
+        <div class="stp" data-step="2"><span class="dot">2</span><span>Konfirmasi</span></div>
+        <div class="bar"></div>
+        <div class="stp" data-step="3"><span class="dot">3</span><span>Selesai</span></div>
+      </div>
+
+      <div id="campaign-summary"></div>
+
+      <!-- STEP 1: Nominal + Instruksi Pembayaran -->
+      <section id="step-pay">
+        <div class="card"><div class="card-body">
+          <div class="field">
+            <label for="amount">Nominal Donasi</label>
+            <div class="input-prefix">
+              <span>Rp</span>
+              <input id="amount" class="" type="text" inputmode="numeric" placeholder="0" autocomplete="off" />
+            </div>
+            <div class="amount-chips" id="chips"></div>
+            <div class="error-text hidden" id="amount-err">Masukkan nominal minimal Rp1.</div>
+          </div>
+
+          <div class="section-label">Pilih Metode Pembayaran</div>
+          <div class="method-options">
+            <label class="method selected" data-method="Transfer">
+              <input type="radio" name="method" value="Transfer" checked />
+              <span class="m-ico">&#127974;</span>
+              <span><b>Transfer Bank</b><br /><small class="don-meta">Transfer ke rekening panitia</small></span>
+            </label>
+            <label class="method" data-method="QRIS">
+              <input type="radio" name="method" value="QRIS" />
+              <span class="m-ico">&#128241;</span>
+              <span><b>QRIS</b><br /><small class="don-meta">Scan kode QR dari aplikasi apa saja</small></span>
+            </label>
+          </div>
+
+          <div id="pay-detail" class="mt-12"></div>
+        </div></div>
+
+        <div style="height:90px"></div>
+        <div class="sticky-cta"><div class="container">
+          <button class="btn btn-primary" id="to-confirm">Saya Sudah Transfer, Konfirmasi Donasi</button>
+        </div></div>
+      </section>
+
+      <!-- STEP 2: Form Konfirmasi -->
+      <section id="step-confirm" class="hidden">
+        <div class="card"><div class="card-body">
+          <h2 class="page-title" style="margin-top:0">Konfirmasi Donasi</h2>
+          <p class="page-subtitle">Lengkapi data berikut agar donasi Anda dapat kami verifikasi.</p>
+
+          <div class="notice err hidden" id="form-err"></div>
+
+          <div class="field">
+            <label for="name">Nama Lengkap</label>
+            <input id="name" class="input" type="text" placeholder="Nama Anda" />
+            <div class="error-text hidden" id="name-err">Nama wajib diisi.</div>
+          </div>
+
+          <div class="field">
+            <label for="amount2">Nominal Donasi</label>
+            <div class="input-prefix">
+              <span>Rp</span>
+              <input id="amount2" type="text" inputmode="numeric" placeholder="0" autocomplete="off" />
+            </div>
+            <div class="error-text hidden" id="amount2-err">Nominal minimal Rp1.</div>
+          </div>
+
+          <div class="field">
+            <label>Metode Pembayaran</label>
+            <select id="method2" class="select">
+              <option value="Transfer">Transfer Bank</option>
+              <option value="QRIS">QRIS</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="proof">Upload Bukti Pembayaran</label>
+            <input id="proof" class="input" type="file" accept="image/png,image/jpeg" />
+            <div class="hint">Format JPG/PNG, maksimal 5 MB.</div>
+            <div class="error-text hidden" id="proof-err"></div>
+          </div>
+
+          <div class="field">
+            <label for="note">Catatan (opsional)</label>
+            <textarea id="note" class="textarea" placeholder="Doa atau pesan Anda..."></textarea>
+          </div>
+        </div></div>
+
+        <div style="height:100px"></div>
+        <div class="sticky-cta"><div class="container">
+          <button class="btn btn-primary" id="submit">Kirim Konfirmasi</button>
+        </div></div>
+      </section>
+
+      <!-- STEP 3: Sukses -->
+      <section id="step-success" class="hidden">
+        <div class="card"><div class="card-body success">
+          <div class="check">&#10003;</div>
+          <h2 class="page-title">Jazakumullah khairan!</h2>
+          <p class="page-subtitle">Konfirmasi donasi Anda telah kami terima dan sedang menunggu verifikasi admin. Semoga menjadi amal jariyah.</p>
+          <a class="btn btn-primary" href="index.html">Kembali ke Beranda</a>
+        </div></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/sample-data.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/donasi.js"></script>
+</body>
+</html>

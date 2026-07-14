@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 720" width="540" height="720" role="img" aria-label="Bukti transfer dummy">
+  <defs>
+    <linearGradient id="hd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e9f6e"/>
+      <stop offset="1" stop-color="#057a55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="540" height="720" fill="#eef1f5"/>
+
+  <!-- phone status bar -->
+  <rect width="540" height="44" fill="url(#hd)"/>
+  <text x="24" y="29" font-size="16" font-weight="700" fill="#ffffff" font-family="'Segoe UI',sans-serif">09:41</text>
+  <g fill="#ffffff" font-family="'Segoe UI',sans-serif"><text x="516" y="29" font-size="14" text-anchor="end">96% &#9745;</text></g>
+
+  <!-- app header -->
+  <rect y="44" width="540" height="64" fill="url(#hd)"/>
+  <text x="270" y="84" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff" font-family="'Segoe UI',sans-serif">BCA mobile</text>
+
+  <!-- success check -->
+  <circle cx="270" cy="190" r="48" fill="#0e9f6e"/>
+  <path d="M248 190 l16 16 l30 -34" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="270" y="270" text-anchor="middle" font-size="24" font-weight="800" fill="#0f1b2d" font-family="'Segoe UI',sans-serif">Transaksi Berhasil</text>
+  <text x="270" y="300" text-anchor="middle" font-size="14" fill="#64748b" font-family="'Segoe UI',sans-serif">25 Jun 2026, 09:41 WIB</text>
+
+  <!-- receipt card -->
+  <rect x="30" y="336" width="480" height="312" rx="18" fill="#ffffff"/>
+  <g font-family="'Segoe UI',sans-serif">
+    <text x="54" y="384" font-size="13" fill="#64748b">Nominal Transfer</text>
+    <text x="486" y="384" font-size="20" font-weight="800" fill="#0f1b2d" text-anchor="end">Rp100.000</text>
+    <line x1="54" y1="404" x2="486" y2="404" stroke="#e8ecf1" stroke-width="1" stroke-dasharray="3 5"/>
+
+    <text x="54" y="438" font-size="13" fill="#64748b">Dari Rekening</text>
+    <text x="486" y="438" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">A**** F**** &#8226; 6071******</text>
+    <line x1="54" y1="458" x2="486" y2="458" stroke="#e8ecf1" stroke-width="1" stroke-dasharray="3 5"/>
+
+    <text x="54" y="492" font-size="13" fill="#64748b">Ke Rekening</text>
+    <text x="486" y="492" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">123456 7890 (BCA)</text>
+    <line x1="54" y1="512" x2="486" y2="512" stroke="#e8ecf1" stroke-width="1" stroke-dasharray="3 5"/>
+
+    <text x="54" y="546" font-size="13" fill="#64748b">Penerima</text>
+    <text x="486" y="546" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">Kemuslimahan Masjid Al-Ikhlas</text>
+    <line x1="54" y1="566" x2="486" y2="566" stroke="#e8ecf1" stroke-width="1" stroke-dasharray="3 5"/>
+
+    <text x="54" y="600" font-size="13" fill="#64748b">No. Referensi</text>
+    <text x="486" y="600" font-size="14" font-weight="700" fill="#0f1b2d" text-anchor="end">2406250941XYZ</text>
+
+    <text x="270" y="632" text-anchor="middle" font-size="11" fill="#94a3b8">Bukti ini hanya contoh / dummy untuk demo</text>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" width="360" height="420" role="img" aria-label="QRIS dummy">
+  <rect width="360" height="420" rx="16" fill="#ffffff"/>
+  <!-- QRIS header band -->
+  <rect x="0" y="0" width="360" height="56" rx="16" fill="#e2231a"/>
+  <rect x="0" y="28" width="360" height="28" fill="#e2231a"/>
+  <text x="24" y="36" font-size="22" font-weight="800" fill="#ffffff" font-family="'Segoe UI',sans-serif">QRIS</text>
+  <text x="336" y="36" text-anchor="end" font-size="12" font-weight="700" fill="#ffffff" font-family="'Segoe UI',sans-serif">Satu QR untuk semua</text>
+
+  <text x="180" y="84" text-anchor="middle" font-size="15" font-weight="800" fill="#0f1b2d" font-family="'Segoe UI',sans-serif">Kemuslimahan Masjid Al-Ikhlas</text>
+  <text x="180" y="104" text-anchor="middle" font-size="11" fill="#64748b" font-family="'Segoe UI',sans-serif">NMID : ID1024030000000 &#8226; A01</text>
+
+  <!-- QR code (dekoratif/dummy) -->
+  <g transform="translate(70,124)">
+    <rect x="-8" y="-8" width="236" height="236" rx="10" fill="#ffffff" stroke="#e8ecf1"/>
+    <g fill="#0f1b2d">
+      <!-- finder patterns -->
+      <rect x="0" y="0" width="56" height="56"/><rect x="10" y="10" width="36" height="36" fill="#ffffff"/><rect x="18" y="18" width="20" height="20" fill="#0f1b2d"/>
+      <rect x="164" y="0" width="56" height="56"/><rect x="174" y="10" width="36" height="36" fill="#ffffff"/><rect x="182" y="18" width="20" height="20" fill="#0f1b2d"/>
+      <rect x="0" y="164" width="56" height="56"/><rect x="10" y="174" width="36" height="36" fill="#ffffff"/><rect x="18" y="182" width="20" height="20" fill="#0f1b2d"/>
+      <!-- random modules -->
+      <rect x="72" y="8" width="12" height="12"/><rect x="96" y="8" width="12" height="12"/><rect x="128" y="8" width="12" height="12"/>
+      <rect x="72" y="32" width="12" height="12"/><rect x="112" y="32" width="12" height="12"/><rect x="140" y="32" width="12" height="12"/>
+      <rect x="8" y="72" width="12" height="12"/><rect x="32" y="72" width="12" height="12"/><rect x="72" y="72" width="12" height="12"/><rect x="104" y="72" width="12" height="12"/><rect x="144" y="72" width="12" height="12"/><rect x="184" y="72" width="12" height="12"/><rect x="208" y="72" width="12" height="12"/>
+      <rect x="24" y="96" width="12" height="12"/><rect x="64" y="96" width="12" height="12"/><rect x="96" y="96" width="12" height="12"/><rect x="128" y="96" width="12" height="12"/><rect x="160" y="96" width="12" height="12"/><rect x="200" y="96" width="12" height="12"/>
+      <rect x="8" y="120" width="12" height="12"/><rect x="48" y="120" width="12" height="12"/><rect x="88" y="120" width="12" height="12"/><rect x="120" y="120" width="12" height="12"/><rect x="152" y="120" width="12" height="12"/><rect x="192" y="120" width="12" height="12"/>
+      <rect x="72" y="144" width="12" height="12"/><rect x="104" y="144" width="12" height="12"/><rect x="136" y="144" width="12" height="12"/><rect x="168" y="144" width="12" height="12"/><rect x="208" y="144" width="12" height="12"/>
+      <rect x="72" y="176" width="12" height="12"/><rect x="96" y="176" width="12" height="12"/><rect x="128" y="176" width="12" height="12"/><rect x="160" y="176" width="12" height="12"/><rect x="200" y="176" width="12" height="12"/>
+      <rect x="80" y="200" width="12" height="12"/><rect x="112" y="200" width="12" height="12"/><rect x="144" y="200" width="12" height="12"/><rect x="184" y="200" width="12" height="12"/><rect x="208" y="200" width="12" height="12"/>
+    </g>
+  </g>
+
+  <text x="180" y="396" text-anchor="middle" font-size="11" fill="#94a3b8" font-family="'Segoe UI',sans-serif">QR contoh / dummy &#8226; tidak untuk transaksi nyata</text>
+</svg>
