@@ -104,8 +104,12 @@ function getAllCampaignsCached() {
 }
 
 function getActiveCampaigns() {
+  // Kembalikan ACTIVE dan COMPLETED agar halaman publik bisa
+  // menampilkan donasi yang sudah terpenuhi dengan label "Donasi Terpenuhi".
+  // Hanya status CLOSED yang disembunyikan dari publik.
   return getAllCampaignsCached().filter(function (c) {
-    return String(c.status).toUpperCase() === "ACTIVE";
+    var s = String(c.status).toUpperCase();
+    return s === "ACTIVE" || s === "COMPLETED";
   });
 }
 
